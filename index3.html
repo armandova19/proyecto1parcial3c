@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>proyecto_1parcial</title>
+        <link rel="stylesheet" type="text/css" href="css/design3.css">
+        <script src="js/personas.js"></script>
+    </head>
+    <body>
+        <nav class="menu">
+              
+          <ul>
+            <lo><a href="index.html">Inicio</a></lo>
+            <lo><a href="index2.html">Deudor</a></lo>
+            <lo><a href="index3.html">Propietario</a></lo>
+         </ul>
+        </nav>
+        <div class="titulo"><p>Perfil de propietario</p></div>
+     <div class="container">
+       <form class="form">
+         <label for="phone">Nombre completo: </label>
+         <input type="text" id="name" placeholder="Ingrese el nombre completo"><br><br>
+         <label for="phone">Telefono: </label>
+         <input type="text" id="phone" placeholder="Ingrese numero de telefono"><br><br>
+         <label for="correo">Correo electronico:</label>
+         <input type="text" id="e-mail" placeholder="example@.com"><br><br>
+         <label for="pwd">Contraseña:</label>
+         <input type="password" id="password">
+         <br><br>
+         <button type="button" id="btnagregar">Agregar</button>
+         <button type="reset" id="reset">Resetear</button>
+         <button type="button" id="recuperar">Mostrar info.</button>
+       </form>
+     </div>
+     <div id="contenido" class="card"></div>
+     <!---formulario para agregarle la cantidad a cobrar a los usuarios-->
+     <br><br><br><br>
+     <h1 class="titulo"><p class="cantidad">Registro de cantidad</p></h1>
+     <div class="container">
+      <form class="form">
+        <label for="phone2">Telefono: </label>
+        <input type="text" id="phone2" placeholder="Ingrese numero de telefono"><br><br>
+        <label for="cantidad">Cantidad:</label>
+        <input type="text" id="cantidad" placeholder="Ingrese la cantidad "><br><br>
+
+        <br><br>
+        <button type="button" id="btnadd">Agregar</button>
+        <button type="reset" id="reset">Resetear</button>
+        <button type="button" id="resave">mostrar info.</button>
+        
+      </form>
+    </div>
+    <div id="contenido2" class="card"></div>
+     <script src="js/proreg.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+
+body{
+	background-color: lightgray;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: auto;
+}
+.menu{
+	width: 1430px;
+	height: 50px;
+	background-color: lightblue;
+	word-spacing: 10px;
+}
+
+ul{
+	float: left;
+	text-decoration: none;
+	word-spacing: 10px;
+}
+.titulo{
+	height: 300px;
+	width: 1430px;
+	background-color: #222222;
+	border-radius: 10px;
+}
+/*neon effect*/
+p {
+  text-align:center;
+  font-size:7em;
+  margin:20px 0 20px 0;
+}
+
+p{
+  text-decoration:none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+p:nth-child(1) {
+  color:#0052cc;
+  font-family:comic sans;
+}
+p:nth-child(1):hover{
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+
+p:hover{
+color:#ffffff;
+}
+
+
+
+/*glow for webkit-ket-frames*/
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #0052cc,
+               0 0 70px  #0052cc,
+               0 0 80px  #0052cc,
+               0 0 100px #0052cc,
+               0 0 150px #0052cc;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #0052cc,
+               0 0 35px #0052cc,
+               0 0 40px #0052cc,
+               0 0 50px #0052cc,
+               0 0 75px #0052cc;
+  }
+}
+
+
+
+/*glow for mozilla-keyframes*/
+@-moz-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #0052cc,
+               0 0 70px  #0052cc,
+               0 0 80px  #0052cc,
+               0 0 100px #0052cc,
+               0 0 150px #0052cc;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #0052cc,
+               0 0 35px #0052cc,
+               0 0 40px #0052cc,
+               0 0 50px #0052cc,
+               0 0 75px #0052cc;
+  }
+}
+
+
+
+/*glow*/
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #0052cc,
+               0 0 70px  #0052cc,
+               0 0 80px  #0052cc,
+               0 0 100px #0052cc,
+               0 0 150px #0052cc;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #0052cc,
+               0 0 35px #0052cc,
+               0 0 40px #0052cc,
+               0 0 50px #0052cc,
+               0 0 75px #0052cc;
+  }
+}
+.container{
+	height: auto;
+	width: 1430px;
+	background-color: #0077b3;
+	border-radius: 10px;
+}
+.card{
+  font-size: 0.5em;
+}
