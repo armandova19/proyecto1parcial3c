@@ -8,16 +8,4 @@ class personas{
     }
 }
 
-class cuenta{
-    constructor(telefono, cantidad){
-        this.telefono=telefono;
-        this.cuenta=cantidad;
-    }
-}
 
-class login{
-    constructor(telefono, contraseña){
-        this.telefono=telefono;
-        this.contraseña=contraseña;
-    }
-}

@@ -44,7 +44,7 @@ document.getElementById("recuperar").addEventListener("click", ()=>{
     console.log(base);
   
 })
-
+///////el cobro solo se le hace al cliente que el propietario acaba de registrar
 function CobroCliente(telefono)
 {
     $("#telefono").val(telefono)
@@ -75,7 +75,7 @@ function abrirModalClientes()
 {
     $("#cantidad_todos").modal("show");
 }
-//Agregar deuda a todos los clientes por igual
+//Agregar la cantidad de deudas a todos los clientes registrados 
 function AddcantClientes()
 {
     let cuenta = document.getElementById("cantidad").value;
@@ -91,42 +91,3 @@ function AddcantClientes()
     localStorage.setItem('miBDp',JSON.stringify(base));
 }
 
-/*document.getElementById("btnadd").addEventListener("click", ()=>{
-    let telefono = document.getElementById("phone2").value;
-    let cantidad = document.getElementById("cantidad").value;
-
-    let v1= new cuenta(telefono, cantidad);
-
-    bd.datos.push(v1);
-    localStorage.setItem("miBDp",JSON.stringify(bd));
-    console.log("saving" + v1);
-  
-
-})*/
-
-/*document.getElementById("resave").addEventListener("click", ()=>{
-
-    /*let v1=JSON.parse(localStorage.getItem("miBDp"));
-     document.getElementById("name").value=v1.nombre;
-     document.getElementById("phone").value=v1.telefono;
-     document.getElementById("e-mail").value=v1.correo;
-     document.getElementById("password").value=v1.contraseña;
- 
-     console.log("leido " );
-     console.log(v1);
-     let base = JSON.parse(localStorage.getItem("miBDp"));
-     let texto = "";
-     base.datos.forEach(element => {
-         texto+=`
-             <div class="card">
-                 <p>Telefono: ${element.telefono}</p>
-                 <p> <em>Cuenta:</em> ${element.cantidad}</p>
-             </div>
-         `
-     });
-     document.getElementById("contenido2").innerHTML = texto;
-     console.log(texto);
-     console.log(base);
-   
-})
-*/
