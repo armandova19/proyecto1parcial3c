@@ -27,30 +27,59 @@
          <label for="pwd">Contraseña:</label>
          <input type="password" id="password">
          <br><br>
+         <label for="cantidad">Cantidad:</label>
+         <input type="text" id="cantidad" placeholder="Ingrese la cantidad "><br><br>
          <button type="button" id="btnagregar">Agregar</button>
          <button type="reset" id="reset">Resetear</button>
          <button type="button" id="recuperar">Mostrar info.</button>
        </form>
      </div>
      <div id="contenido" class="card"></div>
-     <!---formulario para agregarle la cantidad a cobrar a los usuarios-->
-     <br><br><br><br>
-     <h1 class="titulo"><p class="cantidad">Registro de cantidad</p></h1>
-     <div class="container">
-      <form class="form">
-        <label for="phone2">Telefono: </label>
-        <input type="text" id="phone2" placeholder="Ingrese numero de telefono"><br><br>
-        <label for="cantidad">Cantidad:</label>
-        <input type="text" id="cantidad" placeholder="Ingrese la cantidad "><br><br>
 
-        <br><br>
-        <button type="button" id="btnadd">Agregar</button>
-        <button type="reset" id="reset">Resetear</button>
-        <button type="button" id="resave">mostrar info.</button>
-        
-      </form>
+
+  <div class="modal fade" id="agregarcobro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agregar cobro</h5>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label for="cobro">Cobro</label>
+                    <input type="number" class="form-control" id="cobro" placeholder="Cobro">
+                    <input type="hidden" id="telefono" value="">
+                </div>
+                <button type="button" class="btn btn-success" onclick="addCobroClient()">Agregar</button>
+            </form>
+        </div>
+      </div>
     </div>
-    <div id="contenido2" class="card"></div>
+ </div>
+
+
+
+
+
+  <div class="modal fade" id="cantidad_todos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agregar a todos </h5>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">cantidad</label>
+                    <input type="number" class="form-control" id="cantidad" placeholder="Cantidad">
+                </div>
+                <button type="button"  class="btn btn-success" onclick="AddcantClientes()">Agregar cantidad</button>
+            </form>
+        </div>
+      </div>
+    </div>
+ </div>
+ 
      <script src="js/proreg.js"></script>
   </body>
 </html>

@@ -1,13 +1,55 @@
 let bd = JSON.parse(localStorage.getItem("miBDp"));
 
 //let bd = { datos: [] }
+if (!bd || bd==undefined)
+{
+    bd = { 
+           datos: [],
+        }
+}
 bd = { datos: [{nombre: 'jose', telefono: 3411095287, correo:'jose@5.com', contraseña: 1234, usuario:1, login:true},
 {nombre:'juan', telefono:3332190881, correo: 'juan@.com', contraseña:5678, usuario:2, login:true},
 {nombre:'gaby', telefono:3125478900, correo: 'gaby@.com', contraseña:7800, usuario:4, login:true}] }
 
 
+//let miBDp=JSON.parse(localStorage.getItem(miBDp));
+//console.log(miBDp);
 
-document.getElementById("btnadd").addEventListener("click", ()=>{
+const ingresar=() =>{
+    let telefono = document.getElementById("phone2").value;
+    let password = document.getElementById("password2").value;
+
+    let cliente = authenticate(telefono, password);
+
+    if(cliente==null)
+    return;
+
+    localStorage.setItem('client', JSON.stringify(cliente));
+    location.replace("index2.html");
+}
+
+let authenticate = (telefono,password) =>{
+    let clientes =JSON.parse(localStorage.getItem("miBDp"));
+    console.log(clientes);
+
+    for(let cliente of clientes.datos){
+        if(cliente.telefono==telefono && cliente.password==password){
+            return cliente;
+        }
+        alert("datos incorrectos");
+        return null;
+
+    }
+}
+
+let check = ()=>{
+    let clientes = JSON.parse(localStorage.getItem('client'));
+
+    if(!(!clientes  || clientes==null  || typeof(clientes)=="undefined"))
+        location.replace("index2.html");
+}
+ let clientes = check();
+/*document.getElementById("btnadd").addEventListener("click", ()=>{
     let nombre = document.getElementById("name").value;
     let telefono = document.getElementById("phone").value;
     let correo = document.getElementById("e-mail").value;
@@ -20,9 +62,9 @@ document.getElementById("btnadd").addEventListener("click", ()=>{
     console.log("saving" + v1);
   
 
-})
-////boton re recuperar datos
-document.getElementById("resave").addEventListener("click", ()=>{
+})*/
+////boton de recuperar datos
+/*document.getElementById("resave").addEventListener("click", ()=>{
 
     let v1=JSON.parse(localStorage.getItem("miBDp"));
      document.getElementById("name").value=v1.nombre;
@@ -48,13 +90,13 @@ document.getElementById("resave").addEventListener("click", ()=>{
      console.log(texto);
      console.log(base);
    
-})
+})*/
 
 /*document.getElementById("btn_login").addEventListener("click", ()=>{
     let bd = JSON.parse(localStorage.getItem("miBDp"));
-    bd = { datos: [{nombre: 'jose', telefono: 3411095287, correo:'jose@5.com', contraseña: 1234, usuario:1, login:true},
-    {nombre:'juan', telefono:3332190881, correo: 'juan@.com', contraseña:5678, usuario:2, login:true},
-    {nombre:'gaby', telefono:3125478900, correo: 'gaby@.com', contraseña:7800, usuario:4, login:true}] }
+    //bd = { datos: [{nombre: 'jose', telefono: 3411095287, correo:'jose@5.com', contraseña: 1234, usuario:1, login:true},
+    //{nombre:'juan', telefono:3332190881, correo: 'juan@.com', contraseña:5678, usuario:2, login:true},
+    //{nombre:'gaby', telefono:3125478900, correo: 'gaby@.com', contraseña:7800, usuario:4, login:true}] }
 
 
     var userphone = localStorage.getItem('telefono');
@@ -66,16 +108,14 @@ document.getElementById("resave").addEventListener("click", ()=>{
     //let u = document.getElementById("usuario").value;
 
     if(phone.value == userphone && password.value == userpassword){  
-        alert("datos correctos");
-            window.location.href="index2.html";
+            location.replace=("index2.html");
     }else{
-        alert("datos incorrectos");
-            location.href="index.html";
+            location.replace=("index.html");
     }
 })*/
 
 //funcion para verificar el login
-function check(){
+/*function check(){
     let bd = JSON.parse(localStorage.getItem("miBDp"));
     bd = { datos: [{nombre: 'jose', telefono: 3411095287, correo:'jose@5.com', contraseña: 1234, usuario:1, login:true},
     {nombre:'juan', telefono:3332190881, correo: 'juan@.com', contraseña:5678, usuario:2, login:true},
@@ -91,11 +131,11 @@ function check(){
 
     if(phone.value == userphone && password.value == userpassword){
         location.replace=("index2.html");
-        alert("datos correctos");
+        
     }else if(phone.value != userphone && password.value !=userpassword){
         location.replace=("index2.html");
-        alert("datos incorrectos");
+        
     }
    
-}
+}*/
 
